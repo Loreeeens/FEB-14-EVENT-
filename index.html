@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FEB-14 EVENT</title>
+  <style>
+    body {
+      font-family: Trebuchet MS, sans-serif;
+      text-align: center;
+      margin-top: 200px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 50px;
+      margin: 15px;
+      cursor: pointer;
+    }
+
+    #yesBtn {
+      transition: transform 0.3s ease;
+    }
+  </style>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</head>
+<body>
+
+  <h2>Do you want to be my VALENTINE?💜</h2>
+
+  <button id="yesBtn">YESSSS!</button>
+  <button id="noBtn">No :(</button>
+
+
+<style>
+  button {
+    padding: 14px 28px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+  }
+
+  #yesBtn {
+    background-color: #28a745; /* green */
+    transition: transform 0.3s ease;
+  }
+
+  #noBtn {
+    background-color: #dc3545; /* red */
+  }
+</style>
+
+  <script>
+    let scale = 1;
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("click", () => {
+      scale += 0.3; // increase size each click
+      yesBtn.style.transform = `scale(${scale})`;
+    });
+
+    yesBtn.addEventListener("click", () => {
+      alert("Thank you for confiriming to be my valentine this February 14, 2026! Kindly approach Mr. Laurence Caldejon to get your reward.💜");
+    });
+  </script>
+
+<script>
+  document.getElementById("yesBtn").addEventListener("click", () => {
+    confetti({
+      particleCount: 150,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
+  });
+</script>
+
+</body>
+</html>
